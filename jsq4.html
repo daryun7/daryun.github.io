@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>김명중</title>
+  <style>
+    input {
+      background: yellow;
+      width: 150px;
+      height: 30px;
+      border: 1px solid red;
+    }
+
+    img {
+      border: 2px solid black;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.js">
+  </script>
+  <script>
+    $(document).ready(function() {
+      $("#btn").click(function() {
+        $("img").animate({
+          width: "600px"
+        }, 1000);
+        $("img").animate({
+          height: "600px"
+        }, 1000);
+        $("img").animate({
+          borderRadius: "50px"
+        }, 1000);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <a href="index.html">HOME</a><br><br>
+  <img src="peng2.jpg" width="300" height="200">
+  <br><b>김명중이에오</b><br>
+  <input type="button" id="btn" value="확대하기">
+</body>
+
+</html>
