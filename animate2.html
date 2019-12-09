@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>animate ver2</title>
+  <style>
+    button {
+      width: 100px;
+      height: 30px;
+      border: 1px solid red;
+    }
+
+    img {
+      border: 2px solid red;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.js">
+  </script>
+  <script>
+    $(document).ready(function() {
+      $("#btn1").click(function() {
+        $("#pengsoo").animate({
+          marginLeft: "+=300px"
+        }, "slow");
+        $("#pengsoo").animate({
+          marginLeft: "-=300px"
+        }, "slow");
+      });
+      $("#btn2").click(function() {
+        $("img").animate({
+          height: "toggle"
+        }, "slow");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <a href="index.html"><h3>HOME</h3></a><br><br>
+  <img src="peng1.jpg" id="pengsoo" width="400" height="265">
+  <br><b>한국의 펭수</b><br>펭수에오~~<br>
+  <button id="btn1">좌우 이동</button>
+  <button id="btn2">이미지 토글</button>
+</body>
+
+</html>
